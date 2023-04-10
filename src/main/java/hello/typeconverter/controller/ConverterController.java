@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class ConverterController {
 
+    //메세지 컨버터 객체 -> json , json -> 객체
+    //메세지 컨버터(HttpMessageConverter)에는 컨버젼 서비스가 적용되지 않는다.
+    //컨버젼 서비스는 @RequestParm, @ModelAttribte, @PathVariable에서 사용.
+
     @GetMapping("/converter-view")
     public String converterView(Model model) {
         model.addAttribute("number",10000);
